@@ -44,12 +44,13 @@ planning affordances, or simulation transfer.
 
 ## Surveys and Roadmaps
 
-| Title                                                                                                                                   | Year | Venue                   | Desc                                                                                         |
-| --------------------------------------------------------------------------------------------------------------------------------------- | ---- | ----------------------- | -------------------------------------------------------------------------------------------- |
-| [Spatial Intelligence from a Cognitive Map Perspective: A Survey](https://github.com/Klingsor-tyx/Awesome-Spatial-Cognitive-Map#readme) | 2026 | Preprint / Awesome list | Organizes spatial intelligence as cognitive-map construction, reasoning, and generation.     |
-| [World-Model Functional Taxonomy](https://x.com/drfeifei/status/2062247238143996275)                                                    | 2026 | X / Blog                | Separates visual rendering from stateful simulation and planning for action-capable worlds.  |
-| [Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI](https://arxiv.org/abs/2407.06886)                     | 2025 | arXiv                   | Surveys embodied AI across perception, action, simulation, and cyber-physical alignment.     |
-| [A Survey of Self-Evolving Agents](https://arxiv.org/abs/2507.21046)                                                                    | 2025 | arXiv                   | Reviews self-improvement loops that are increasingly used in agentic environment generation. |
+| Title                                                                                                                                   | Year | Venue                   | Desc                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------- | ---- | ----------------------- | ---------------------------------------------------------------------------------------------- |
+| [Spatial Intelligence from a Cognitive Map Perspective: A Survey](https://github.com/Klingsor-tyx/Awesome-Spatial-Cognitive-Map#readme) | 2026 | Preprint / Awesome list | Organizes spatial intelligence as cognitive-map construction, reasoning, and generation.       |
+| [World-Model Functional Taxonomy](https://x.com/drfeifei/status/2062247238143996275)                                                    | 2026 | X / Blog                | Separates visual rendering from stateful simulation and planning for action-capable worlds.    |
+| [Amara Whitepaper](https://docsend.com/view/a4bz2ffc35gqaqru)                                                                           | 2026 | [01C](https://01c.ai/)  | Frames scene generation as structured spatial state, constraints, and geometry-aware planning. |
+| [Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI](https://arxiv.org/abs/2407.06886)                     | 2025 | arXiv                   | Surveys embodied AI across perception, action, simulation, and cyber-physical alignment.       |
+| [A Survey of Self-Evolving Agents](https://arxiv.org/abs/2507.21046)                                                                    | 2025 | arXiv                   | Reviews self-improvement loops that are increasingly used in agentic environment generation.   |
 
 ## Spatial Perception and Representations
 

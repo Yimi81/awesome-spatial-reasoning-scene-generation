@@ -33,6 +33,7 @@
 | --------------------------------------------------------------------------------------------------------------------------------------- | ---- | ----------------------- | ---------------------------------------------------------- |
 | [Spatial Intelligence from a Cognitive Map Perspective: A Survey](https://github.com/Klingsor-tyx/Awesome-Spatial-Cognitive-Map#readme) | 2026 | Preprint / Awesome list | 从认知地图的构建、推理和生成三个过程组织空间智能研究。     |
 | [World-Model Functional Taxonomy](https://x.com/drfeifei/status/2062247238143996275)                                                    | 2026 | X / Blog                | 区分视觉渲染、状态仿真和面向行动世界的规划。               |
+| [Amara Whitepaper](https://docsend.com/view/a4bz2ffc35gqaqru)                                                                           | 2026 | [01C](https://01c.ai/)  | 将场景生成定义为结构化空间状态、约束和几何感知规划问题。   |
 | [Aligning Cyber Space with Physical World: A Comprehensive Survey on Embodied AI](https://arxiv.org/abs/2407.06886)                     | 2025 | arXiv                   | 综述具身 AI 中的感知、行动、仿真和物理世界对齐问题。       |
 | [A Survey of Self-Evolving Agents](https://arxiv.org/abs/2507.21046)                                                                    | 2025 | arXiv                   | 梳理自改进 agent 循环，这类机制正被用于 agentic 环境生成。 |
 
