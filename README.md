@@ -35,8 +35,10 @@ planning affordances, or simulation transfer.
 - [Spatial Perception and Representations](#spatial-perception-and-representations)
 - [Spatial Reasoning and Planning](#spatial-reasoning-and-planning)
 - [Benchmarks and Evaluation](#benchmarks-and-evaluation)
-- [Scene Synthesis and Controllable Layout](#scene-synthesis-and-controllable-layout)
-- [Agentic and Simulation-Ready Scene Generation](#agentic-and-simulation-ready-scene-generation)
+- [Symbolic and Procedural Scene Generation](#symbolic-and-procedural-scene-generation)
+- [3D Data-Driven Scene Generation](#3d-data-driven-scene-generation)
+- [LLM and VFM Static Scene Pipelines](#llm-and-vfm-static-scene-pipelines)
+- [Agent-Based Scene Generation and Simulation Loops](#agent-based-scene-generation-and-simulation-loops)
 - [Embodied Simulation and Robot Learning](#embodied-simulation-and-robot-learning)
 - [Tools, Assets, and Physics Engines](#tools-assets-and-physics-engines)
 
@@ -64,15 +66,12 @@ planning affordances, or simulation transfer.
 
 ## Spatial Reasoning and Planning
 
-| Title                                                                                                                                                                   | Year | Venue   | Desc                                                                                         |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------- | -------------------------------------------------------------------------------------------- |
-| [Visual Spatial Reasoning](https://arxiv.org/abs/2205.00363)                                                                                                            | 2023 | arXiv   | Studies visual recognition of spatial relations in natural images.                           |
-| [LayoutGPT](https://arxiv.org/abs/2305.15393)                                                                                                                           | 2023 | NeurIPS | Uses LLMs for compositional visual planning and 3D layout generation.                        |
-| [SayPlan](https://arxiv.org/abs/2307.06135)                                                                                                                             | 2023 | CoRL    | Grounds LLM planning in large 3D scene graphs for multi-room robot tasks.                    |
-| [cuRobo](https://arxiv.org/abs/2310.17274)                                                                                                                              | 2023 | arXiv   | Provides parallelized collision-free robot motion generation for simulation pipelines.       |
-| [M2T2](https://arxiv.org/abs/2311.00926)                                                                                                                                | 2023 | arXiv   | Uses an object-centric transformer for pick-and-place grasp and placement reasoning.         |
-| [LayoutVLM](https://openaccess.thecvf.com/content/CVPR2025/html/Sun_LayoutVLM_Differentiable_Optimization_of_3D_Layout_via_Vision-Language_Models_CVPR_2025_paper.html) | 2025 | CVPR    | Optimizes 3D layouts with VLM-derived objectives and physically grounded semantic alignment. |
-| [VULCAN](https://arxiv.org/abs/2512.22351)                                                                                                                              | 2026 | arXiv   | Uses tool-augmented multi-agent iteration for relation-aware 3D object arrangement.          |
+| Title                                                        | Year | Venue | Desc                                                                                   |
+| ------------------------------------------------------------ | ---- | ----- | -------------------------------------------------------------------------------------- |
+| [Visual Spatial Reasoning](https://arxiv.org/abs/2205.00363) | 2023 | arXiv | Studies visual recognition of spatial relations in natural images.                     |
+| [SayPlan](https://arxiv.org/abs/2307.06135)                  | 2023 | CoRL  | Grounds LLM planning in large 3D scene graphs for multi-room robot tasks.              |
+| [cuRobo](https://arxiv.org/abs/2310.17274)                   | 2023 | arXiv | Provides parallelized collision-free robot motion generation for simulation pipelines. |
+| [M2T2](https://arxiv.org/abs/2311.00926)                     | 2023 | arXiv | Uses an object-centric transformer for pick-and-place grasp and placement reasoning.   |
 
 ## Benchmarks and Evaluation
 
@@ -85,47 +84,78 @@ planning affordances, or simulation transfer.
 | [SpatialBench](https://arxiv.org/abs/2511.21471)                                                                            | 2025 | arXiv  | Benchmarks multimodal spatial cognition from observation to planning.                     |
 | [Benchmarking and Learning Multi-Dimensional Quality Evaluator for Text-to-3D Generation](https://arxiv.org/abs/2412.11170) | 2025 | arXiv  | Studies multi-dimensional quality evaluation for text-to-3D generation.                   |
 
-## Scene Synthesis and Controllable Layout
+## Symbolic and Procedural Scene Generation
 
-| Title                                                                                                                                                                           | Year | Venue    | Desc                                                                                       |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | -------- | ------------------------------------------------------------------------------------------ |
-| [WordsEye](https://doi.org/10.1145/383259.383316)                                                                                                                               | 2001 | SIGGRAPH | Early text-to-scene system using symbolic language-to-3D conversion.                       |
-| [Learning Spatial Knowledge for Text to 3D Scene Generation](https://aclanthology.org/D14-1217/)                                                                                | 2014 | EMNLP    | Learns spatial knowledge for placing objects in language-driven 3D scenes.                 |
-| [Language-Driven Synthesis of 3D Scenes from Scene Databases](https://doi.org/10.1145/3272127.3275025)                                                                          | 2018 | TOG      | Synthesizes 3D scenes from natural language using scene database priors.                   |
-| [GRAINS](https://arxiv.org/abs/1807.09193)                                                                                                                                      | 2019 | SIGGRAPH | Uses recursive generative models for indoor scene structure.                               |
-| [PlanIT](https://doi.org/10.1145/3306346.3322941)                                                                                                                               | 2019 | SIGGRAPH | Plans and instantiates indoor scenes with relation graphs and spatial prior networks.      |
-| [ATISS](https://arxiv.org/abs/2110.03675)                                                                                                                                       | 2021 | NeurIPS  | Applies autoregressive transformers to indoor scene synthesis.                             |
-| [ProcTHOR](https://arxiv.org/abs/2206.06994)                                                                                                                                    | 2022 | NeurIPS  | Procedurally generates large-scale embodied AI environments.                               |
-| [CommonScenes](https://arxiv.org/abs/2305.16283)                                                                                                                                | 2023 | NeurIPS  | Generates commonsense 3D indoor scenes with scene graph diffusion.                         |
-| [Text2Room](https://arxiv.org/abs/2303.11989)                                                                                                                                   | 2023 | ICCV     | Extracts textured 3D room meshes from text-to-image priors.                                |
-| [DiffuScene](https://openaccess.thecvf.com/content/CVPR2024/html/Tang_DiffuScene_Denoising_Diffusion_Models_for_Generative_Indoor_Scene_Synthesis_CVPR_2024_paper.html)         | 2024 | CVPR     | Uses diffusion models for generative indoor scene synthesis.                               |
-| [PhyScene](https://openaccess.thecvf.com/content/CVPR2024/html/Yang_PhyScene_Physically_Interactable_3D_Scene_Synthesis_for_Embodied_AI_CVPR_2024_paper.html)                   | 2024 | CVPR     | Generates physically interactable 3D scenes for embodied AI.                               |
-| [AnyHome](https://arxiv.org/abs/2312.06644)                                                                                                                                     | 2024 | ECCV     | Generates structured and textured 3D homes with open-vocabulary prompts.                   |
-| [Open-Universe Indoor Scene Generation](https://arxiv.org/abs/2403.09675)                                                                                                       | 2024 | arXiv    | Uses LLM program synthesis and uncurated object databases for open-universe indoor scenes. |
-| [EchoScene](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf)                                                                                                 | 2024 | ECCV     | Improves scene graph diffusion through information echo over generated structures.         |
-| [I-Design](https://doi.org/10.1007/978-3-031-73036-8_13)                                                                                                                        | 2024 | ECCV     | Uses LLMs as personalized interior designers for layout and furnishing.                    |
-| [SceneTeller](https://doi.org/10.1007/978-3-031-72658-3_21)                                                                                                                     | 2024 | ECCV     | Converts language into 3D scene generation plans.                                          |
-| [GraphDreamer](https://openaccess.thecvf.com/content/CVPR2024/html/Gao_GraphDreamer_Compositional_3D_Scene_Synthesis_from_Scene_Graphs_CVPR_2024_paper.html)                    | 2024 | CVPR     | Generates compositional 3D scenes from explicit scene graphs.                              |
-| [Hierarchically-Structured Open-Vocabulary Indoor Scene Synthesis](https://ojs.aaai.org/index.php/AAAI/article/view/32874)                                                      | 2025 | AAAI     | Uses pretrained LLMs for hierarchical open-vocabulary indoor scene synthesis.              |
-| [Scene Language](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_The_Scene_Language_Representing_Scenes_with_Programs_Words_and_Embeddings_CVPR_2025_paper.html)      | 2025 | CVPR     | Represents scenes with programs, words, and embeddings for controllable generation.        |
-| [SceneFactor](https://openaccess.thecvf.com/content/CVPR2025/html/Bokhovkin_SceneFactor_Factored_Latent_3D_Diffusion_for_Controllable_3D_Scene_Generation_CVPR_2025_paper.html) | 2025 | CVPR     | Uses factored latent 3D diffusion for controllable scene generation.                       |
+Rule-based and procedural methods are useful baselines because they expose
+geometry and structure, but they often trade away open-vocabulary flexibility
+and adaptive self-correction.
 
-## Agentic and Simulation-Ready Scene Generation
+| Title                                                                                                  | Year | Venue    | Desc                                                                                  |
+| ------------------------------------------------------------------------------------------------------ | ---- | -------- | ------------------------------------------------------------------------------------- |
+| [WordsEye](https://doi.org/10.1145/383259.383316)                                                      | 2001 | SIGGRAPH | Early text-to-scene system using symbolic language-to-3D conversion.                  |
+| [Learning Spatial Knowledge for Text to 3D Scene Generation](https://aclanthology.org/D14-1217/)       | 2014 | EMNLP    | Learns spatial knowledge for placing objects in language-driven 3D scenes.            |
+| [Language-Driven Synthesis of 3D Scenes from Scene Databases](https://doi.org/10.1145/3272127.3275025) | 2018 | TOG      | Synthesizes 3D scenes from natural language using scene database priors.              |
+| [PlanIT](https://doi.org/10.1145/3306346.3322941)                                                      | 2019 | SIGGRAPH | Plans and instantiates indoor scenes with relation graphs and spatial prior networks. |
+| [ProcTHOR](https://arxiv.org/abs/2206.06994)                                                           | 2022 | NeurIPS  | Procedurally generates large-scale embodied AI environments.                          |
+| [Infinigen Indoors](https://arxiv.org/abs/2406.11824)                                                  | 2024 | CVPR     | Procedurally generates photorealistic indoor scenes.                                  |
+
+## 3D Data-Driven Scene Generation
+
+Data-driven scene generators learn spatial priors from existing 3D scenes,
+layouts, floor plans, scene graphs, or object distributions.
+
+| Title                                                                                                                                                                           | Year | Venue    | Desc                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | -------- | ---------------------------------------------------------------------------------- |
+| [GRAINS](https://arxiv.org/abs/1807.09193)                                                                                                                                      | 2019 | SIGGRAPH | Uses recursive generative models for indoor scene structure.                       |
+| [ATISS](https://arxiv.org/abs/2110.03675)                                                                                                                                       | 2021 | NeurIPS  | Applies autoregressive transformers to indoor scene synthesis.                     |
+| [Text2Room](https://arxiv.org/abs/2303.11989)                                                                                                                                   | 2023 | ICCV     | Extracts textured 3D room meshes from text-to-image priors.                        |
+| [CommonScenes](https://arxiv.org/abs/2305.16283)                                                                                                                                | 2023 | NeurIPS  | Generates commonsense 3D indoor scenes with scene graph diffusion.                 |
+| [DiffuScene](https://openaccess.thecvf.com/content/CVPR2024/html/Tang_DiffuScene_Denoising_Diffusion_Models_for_Generative_Indoor_Scene_Synthesis_CVPR_2024_paper.html)         | 2024 | CVPR     | Uses diffusion models for generative indoor scene synthesis.                       |
+| [PhyScene](https://openaccess.thecvf.com/content/CVPR2024/html/Yang_PhyScene_Physically_Interactable_3D_Scene_Synthesis_for_Embodied_AI_CVPR_2024_paper.html)                   | 2024 | CVPR     | Generates physically interactable 3D scenes for embodied AI.                       |
+| [EchoScene](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf)                                                                                                 | 2024 | ECCV     | Improves scene graph diffusion through information echo over generated structures. |
+| [GraphDreamer](https://openaccess.thecvf.com/content/CVPR2024/html/Gao_GraphDreamer_Compositional_3D_Scene_Synthesis_from_Scene_Graphs_CVPR_2024_paper.html)                    | 2024 | CVPR     | Generates compositional 3D scenes from explicit scene graphs.                      |
+| [SceneFactor](https://openaccess.thecvf.com/content/CVPR2025/html/Bokhovkin_SceneFactor_Factored_Latent_3D_Diffusion_for_Controllable_3D_Scene_Generation_CVPR_2025_paper.html) | 2025 | CVPR     | Uses factored latent 3D diffusion for controllable scene generation.               |
+
+## LLM and VFM Static Scene Pipelines
+
+These methods use LLMs, VLMs, image generators, or code generation to produce
+scenes, but typically follow a fixed pipeline or provide limited iterative
+simulation feedback.
+
+| Title                                                                                                                                                                      | Year | Venue        | Desc                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ | -------------------------------------------------------------------------------------------- |
+| [LayoutGPT](https://arxiv.org/abs/2305.15393)                                                                                                                              | 2023 | NeurIPS      | Uses LLMs for compositional visual planning and 3D layout generation.                        |
+| [3D-GPT](https://arxiv.org/abs/2310.12945)                                                                                                                                 | 2023 | arXiv        | Uses LLMs for procedural 3D modeling and scene construction.                                 |
+| [Holodeck](https://arxiv.org/abs/2312.09067)                                                                                                                               | 2024 | CVPR         | Uses LLMs to generate 3D embodied AI environments from language.                             |
+| [AnyHome](https://arxiv.org/abs/2312.06644)                                                                                                                                | 2024 | ECCV         | Generates structured and textured 3D homes with open-vocabulary prompts.                     |
+| [Open-Universe Indoor Scene Generation](https://arxiv.org/abs/2403.09675)                                                                                                  | 2024 | arXiv        | Uses LLM program synthesis and uncurated object databases for open-universe indoor scenes.   |
+| [I-Design](https://doi.org/10.1007/978-3-031-73036-8_13)                                                                                                                   | 2024 | ECCV         | Uses LLMs as personalized interior designers for layout and furnishing.                      |
+| [SceneTeller](https://doi.org/10.1007/978-3-031-72658-3_21)                                                                                                                | 2024 | ECCV         | Converts language into 3D scene generation plans.                                            |
+| [Architect](https://arxiv.org/abs/2411.09823)                                                                                                                              | 2024 | NeurIPS      | Generates interactive 3D scenes with hierarchical 2D inpainting and lifting.                 |
+| [GenUSD](https://doi.org/10.1145/3641520.3665306)                                                                                                                          | 2024 | SIGGRAPH RTL | Generates 3D scenes in Universal Scene Description workflows.                                |
+| [LayoutVLM](https://openaccess.thecvf.com/content/CVPR2025/html/Sun_LayoutVLM_Differentiable_Optimization_of_3D_Layout_via_Vision-Language_Models_CVPR_2025_paper.html)    | 2025 | CVPR         | Optimizes 3D layouts with VLM-derived objectives and physically grounded semantic alignment. |
+| [ArtiScene](https://openaccess.thecvf.com/content/CVPR2025/html/Gu_ArtiScene_Language-Driven_Artistic_3D_Scene_Generation_Through_Image_Intermediary_CVPR_2025_paper.html) | 2025 | CVPR         | Uses generated 2D images as intermediaries for language-driven 3D scene generation.          |
+| [Hierarchically-Structured Open-Vocabulary Indoor Scene Synthesis](https://ojs.aaai.org/index.php/AAAI/article/view/32874)                                                 | 2025 | AAAI         | Uses pretrained LLMs for hierarchical open-vocabulary indoor scene synthesis.                |
+| [Scene Language](https://openaccess.thecvf.com/content/CVPR2025/html/Zhang_The_Scene_Language_Representing_Scenes_with_Programs_Words_and_Embeddings_CVPR_2025_paper.html) | 2025 | CVPR         | Represents scenes with programs, words, and embeddings for controllable generation.          |
+| [Scenethesis](https://arxiv.org/abs/2505.02836)                                                                                                                            | 2025 | arXiv        | Combines LLM planning with vision-guided spatial refinement for 3D scene generation.         |
+| [Holodeck 2.0](https://arxiv.org/abs/2508.05899)                                                                                                                           | 2026 | CVPR         | Uses VLM-guided decomposition, generated 3D assets, spatial constraints, and editing.        |
+
+## Agent-Based Scene Generation and Simulation Loops
+
+Agent-based methods emphasize tool use, feedback, self-improvement, or
+simulator-in-the-loop validation. The stronger entries in this section move from
+plausible scenes toward deployable environments for embodied AI.
 
 | Title                                                        | Year | Venue        | Desc                                                                                     |
 | ------------------------------------------------------------ | ---- | ------------ | ---------------------------------------------------------------------------------------- |
-| [3D-GPT](https://arxiv.org/abs/2310.12945)                   | 2023 | arXiv        | Uses LLMs for procedural 3D modeling and scene construction.                             |
-| [Holodeck](https://arxiv.org/abs/2312.09067)                 | 2024 | CVPR         | Uses LLMs to generate 3D embodied AI environments from language.                         |
 | [SceneCraft](https://arxiv.org/abs/2403.01248)               | 2024 | arXiv        | Uses an LLM agent to synthesize 3D scenes as Blender code.                               |
-| [GenUSD](https://doi.org/10.1145/3641520.3665306)            | 2024 | SIGGRAPH RTL | Generates 3D scenes in Universal Scene Description workflows.                            |
 | [EnvGen](https://arxiv.org/abs/2403.12014)                   | 2024 | arXiv        | Generates and adapts environments via LLMs for embodied agent training.                  |
-| [UnrealLLM](https://aclanthology.org/2025.findings-acl.994/) | 2025 | ACL Findings | Connects LLM-powered procedural content generation to controllable UE5 scene generation. |
 | [WorldCraft](https://arxiv.org/abs/2502.15601)               | 2025 | arXiv        | Creates and customizes photorealistic 3D worlds with LLM agents.                         |
 | [SceneGenAgent](https://arxiv.org/abs/2410.21909)            | 2025 | arXiv        | Uses a coding agent for precise industrial scene generation.                             |
-| [Scenethesis](https://arxiv.org/abs/2505.02836)              | 2025 | arXiv        | Combines LLM planning with vision-guided spatial refinement for 3D scene generation.     |
 | [SceneWeaver](https://arxiv.org/abs/2509.20414)              | 2025 | arXiv        | Uses an extensible self-reflective agent to refine scenes through tool-based feedback.   |
+| [UnrealLLM](https://aclanthology.org/2025.findings-acl.994/) | 2025 | ACL Findings | Connects LLM-powered procedural content generation to controllable UE5 scene generation. |
+| [VULCAN](https://arxiv.org/abs/2512.22351)                   | 2026 | arXiv        | Uses tool-augmented multi-agent iteration for relation-aware 3D object arrangement.      |
 | [SAGE](https://arxiv.org/abs/2602.10116)                     | 2026 | arXiv        | Generates simulator-validated 3D environments with visual and physics critics.           |
-| [Holodeck 2.0](https://arxiv.org/abs/2508.05899)             | 2026 | CVPR         | Uses VLM-guided decomposition, generated 3D assets, spatial constraints, and editing.    |
 | [SimWorld Studio](https://arxiv.org/abs/2605.09423)          | 2026 | arXiv        | Generates evolving Gym-style embodied environments with a self-evolving coding agent.    |
 | [Code2Worlds](https://arxiv.org/abs/2602.11757)              | 2026 | arXiv        | Uses coding LLMs for 4D world generation.                                                |
 | [AutoUE](https://arxiv.org/abs/2603.07106)                   | 2026 | arXiv        | Automates Unreal Engine 3D game generation with multi-agent systems.                     |
@@ -165,7 +195,6 @@ planning affordances, or simulation transfer.
 | [Objaverse](https://arxiv.org/abs/2212.08051)                                                                                                   | 2023 | CVPR     | Large annotated 3D object dataset used by many scene-generation pipelines.       |
 | [Objaverse-XL](https://arxiv.org/abs/2307.05663)                                                                                                | 2023 | NeurIPS  | Expands Objaverse to 10M+ 3D objects.                                            |
 | [Isaac Lab / Orbit](https://arxiv.org/abs/2301.04195)                                                                                           | 2023 | RA-L     | Unified framework for interactive robot learning environments.                   |
-| [Infinigen Indoors](https://arxiv.org/abs/2406.11824)                                                                                           | 2024 | CVPR     | Procedurally generates photorealistic indoor scenes.                             |
 | [Genesis](https://github.com/Genesis-Embodied-AI/Genesis#readme)                                                                                | 2024 | GitHub   | Generative and universal physics engine for robotics and beyond.                 |
 | [TRELLIS](https://arxiv.org/abs/2412.01506)                                                                                                     | 2025 | CVPR     | Generates structured 3D latents for scalable and versatile 3D asset generation.  |
 | [Objaverse++](https://arxiv.org/abs/2504.07334)                                                                                                 | 2025 | arXiv    | Curates 3D objects with quality annotations for asset selection.                 |
