@@ -1,5 +1,7 @@
 # Source Notes
 
+**Languages:** English | [中文](source-notes.zh-CN.md)
+
 These notes explain how the initial list was seeded from local material in this
 workspace. They are not a substitute for canonical paper links.
 

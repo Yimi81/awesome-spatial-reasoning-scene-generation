@@ -24,7 +24,7 @@ stable research resource.
 Use this format:
 
 ```markdown
-- [Name](https://example.com) (YYYY) - One factual sentence about what it contributes.
+| [Name](https://example.com) | YYYY | Venue | One factual sentence about what it contributes. |
 ```
 
 Keep descriptions short, neutral, and specific. Avoid marketing language.
@@ -43,5 +43,6 @@ Keep descriptions short, neutral, and specific. Avoid marketing language.
 - [ ] The entry is in scope.
 - [ ] The link is stable and canonical.
 - [ ] The description is factual and concise.
+- [ ] The entry includes `Title`, `Year`, `Venue`, and `Desc`.
 - [ ] The README table of contents still matches section headings.
 - [ ] `npm run lint` passes, if Node.js is available.
