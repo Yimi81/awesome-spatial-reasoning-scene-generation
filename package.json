@@ -1,0 +1,10 @@
+{
+  "name": "awesome-spatial-reasoning-scene-generation",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Curated awesome list for spatial reasoning and controllable 3D scene generation.",
+  "scripts": {
+    "lint": "npx --yes awesome-lint README.md"
+  },
+  "license": "CC0-1.0"
+}
