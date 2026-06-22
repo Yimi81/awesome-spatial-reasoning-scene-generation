@@ -58,6 +58,7 @@
 | [SayPlan](https://arxiv.org/abs/2307.06135)                  | 2023 | CoRL  | 将 LLM 规划 grounding 到大型 3D 场景图，用于多房间机器人任务。 |
 | [cuRobo](https://arxiv.org/abs/2310.17274)                   | 2023 | arXiv | 提供并行化、无碰撞、最小 jerk 的机器人运动生成。               |
 | [M2T2](https://arxiv.org/abs/2311.00926)                     | 2023 | arXiv | 使用 object-centric transformer 进行抓取与放置推理。           |
+| [S-Agent](https://arxiv.org/abs/2606.20515)                  | 2026 | arXiv | 使用层级空间工具和记忆机制进行多视角/视频空间推理。           |
 
 ## 基准与评测
 

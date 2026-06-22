@@ -73,6 +73,7 @@ planning affordances, or simulation transfer.
 | [SayPlan](https://arxiv.org/abs/2307.06135)                  | 2023 | CoRL  | Grounds LLM planning in large 3D scene graphs for multi-room robot tasks.              |
 | [cuRobo](https://arxiv.org/abs/2310.17274)                   | 2023 | arXiv | Provides parallelized collision-free robot motion generation for simulation pipelines. |
 | [M2T2](https://arxiv.org/abs/2311.00926)                     | 2023 | arXiv | Uses an object-centric transformer for pick-and-place grasp and placement reasoning.   |
+| [S-Agent](https://arxiv.org/abs/2606.20515)                  | 2026 | arXiv | Uses hierarchical spatial tools and memory for multi-view/video spatial reasoning.     |
 
 ## Benchmarks and Evaluation
 
