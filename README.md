@@ -64,6 +64,7 @@ planning affordances, or simulation transfer.
 | [SpatialVLM](https://arxiv.org/abs/2401.12168)    | 2024 | CVPR    | Trains VLMs with spatial reasoning data for metric distance, size, and relation reasoning.   |
 | [SceneGraphLoc](https://arxiv.org/abs/2404.00469) | 2024 | ECCV    | Localizes images against object-level multimodal 3D scene graphs.                            |
 | [LERF](https://arxiv.org/abs/2303.09553)          | 2023 | ICCV    | Embeds open-vocabulary language features in radiance fields for 3D localization and queries. |
+| [SpatialLM](https://arxiv.org/abs/2506.07491)     | 2025 | NeurIPS | Turns point clouds into structured indoor layouts and object boxes with a multimodal LLM.    |
 
 ## Spatial Reasoning and Planning
 
@@ -117,6 +118,7 @@ layouts, floor plans, scene graphs, or object distributions.
 | [EchoScene](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf)                                                                                                 | 2024 | ECCV     | Improves scene graph diffusion through information echo over generated structures. |
 | [GraphDreamer](https://openaccess.thecvf.com/content/CVPR2024/html/Gao_GraphDreamer_Compositional_3D_Scene_Synthesis_from_Scene_Graphs_CVPR_2024_paper.html)                    | 2024 | CVPR     | Generates compositional 3D scenes from explicit scene graphs.                      |
 | [SceneFactor](https://openaccess.thecvf.com/content/CVPR2025/html/Bokhovkin_SceneFactor_Factored_Latent_3D_Diffusion_for_Controllable_3D_Scene_Generation_CVPR_2025_paper.html) | 2025 | CVPR     | Uses factored latent 3D diffusion for controllable scene generation.               |
+| [SpatialGen](https://arxiv.org/abs/2509.14981)                                                                                                                                  | 2026 | 3DV      | Generates view-consistent 3D indoor scenes from explicit semantic layouts.         |
 
 ## LLM and VFM Static Scene Pipelines
 

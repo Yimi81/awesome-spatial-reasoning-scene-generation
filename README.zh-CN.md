@@ -49,6 +49,7 @@
 | [SpatialVLM](https://arxiv.org/abs/2401.12168)    | 2024 | CVPR    | 用空间推理数据训练 VLM，支持距离、尺寸和关系推理。       |
 | [SceneGraphLoc](https://arxiv.org/abs/2404.00469) | 2024 | ECCV    | 将图像定位到由物体级多模态 3D 场景图表示的参考地图中。   |
 | [LERF](https://arxiv.org/abs/2303.09553)          | 2023 | ICCV    | 在辐射场中嵌入开放词表语言特征，支持 3D 查询和定位。     |
+| [SpatialLM](https://arxiv.org/abs/2506.07491)     | 2025 | NeurIPS | 用多模态 LLM 将点云转为结构化室内布局和有向物体框。      |
 
 ## 空间推理与规划
 
@@ -99,6 +100,7 @@
 | [EchoScene](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf)                                                                                                 | 2024 | ECCV     | 通过 scene graph diffusion 中的信息回声改进场景生成。 |
 | [GraphDreamer](https://openaccess.thecvf.com/content/CVPR2024/html/Gao_GraphDreamer_Compositional_3D_Scene_Synthesis_from_Scene_Graphs_CVPR_2024_paper.html)                    | 2024 | CVPR     | 从显式场景图生成组合式 3D 场景。                      |
 | [SceneFactor](https://openaccess.thecvf.com/content/CVPR2025/html/Bokhovkin_SceneFactor_Factored_Latent_3D_Diffusion_for_Controllable_3D_Scene_Generation_CVPR_2025_paper.html) | 2025 | CVPR     | 使用因子化 latent 3D 扩散进行可控场景生成。           |
+| [SpatialGen](https://arxiv.org/abs/2509.14981)                                                                                                                                    | 2026 | 3DV      | 基于显式语义布局生成视角一致的 3D 室内场景。           |
 
 ## LLM 与 VFM 静态场景生成流水线
 
