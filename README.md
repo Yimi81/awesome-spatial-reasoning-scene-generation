@@ -56,14 +56,23 @@ planning affordances, or simulation transfer.
 
 | Title                                             | Year | Venue   | Desc                                                                                         |
 | ------------------------------------------------- | ---- | ------- | -------------------------------------------------------------------------------------------- |
+| [Holistic 3D Scene Parsing and Reconstruction](https://arxiv.org/abs/1808.02201) | 2018 | ECCV    | Parses single RGB images into object layouts, CAD geometry, and functional/physical constraints. |
+| [Total3DUnderstanding](https://arxiv.org/abs/2002.12212) | 2020 | CVPR    | Jointly estimates room layout, object pose, and meshes from a single indoor image.            |
+| [Panoptic 3D Scene Reconstruction](https://arxiv.org/abs/2111.02444) | 2021 | NeurIPS | Unifies geometric reconstruction, semantic segmentation, and instance segmentation from one RGB view. |
+| [Holistic 3D Scene Understanding with Implicit Representation](https://arxiv.org/abs/2103.06422) | 2021 | CVPR    | Refines object shapes, poses, and scene layout with implicit scene representations.           |
+| [Learning 3D Object Shape and Layout without 3D Supervision](https://arxiv.org/abs/2206.07028) | 2022 | CVPR    | Learns object shape and spatial layout from 2D/multiview supervision instead of 3D labels.   |
+| [High-Fidelity Single-view Holistic Reconstruction](https://arxiv.org/abs/2207.08656) | 2022 | ECCV    | Reconstructs room background and foreground objects with instance-aligned implicit functions. |
 | [OpenScene](https://arxiv.org/abs/2211.15654)     | 2023 | CVPR    | Learns open-vocabulary 3D point features aligned with image and text embeddings.             |
 | [CLIP-Fields](https://arxiv.org/abs/2210.05663)   | 2023 | RSS     | Builds semantic robot memory by mapping 3D locations to language-aligned features.           |
 | [VLMaps](https://arxiv.org/abs/2210.05714)        | 2023 | ICRA    | Fuses visual-language features with 3D maps for language-indexed robot navigation.           |
 | [OpenMask3D](https://arxiv.org/abs/2306.13631)    | 2023 | NeurIPS | Performs open-vocabulary 3D instance segmentation with multi-view CLIP features.             |
+| [BUOL](https://arxiv.org/abs/2306.00965)          | 2023 | CVPR    | Lifts 2D observations into occupancy-aware panoptic 3D scene reconstructions.                |
+| [Grounded SAM](https://arxiv.org/abs/2401.14159)  | 2024 | arXiv   | Combines open-set detection and SAM segmentation for promptable object decomposition.        |
 | [ConceptGraphs](https://arxiv.org/abs/2309.16650) | 2024 | ICRA    | Builds open-vocabulary 3D scene graphs for perception, memory, and planning.                 |
 | [SpatialVLM](https://arxiv.org/abs/2401.12168)    | 2024 | CVPR    | Trains VLMs with spatial reasoning data for metric distance, size, and relation reasoning.   |
 | [SceneGraphLoc](https://arxiv.org/abs/2404.00469) | 2024 | ECCV    | Localizes images against object-level multimodal 3D scene graphs.                            |
 | [LERF](https://arxiv.org/abs/2303.09553)          | 2023 | ICCV    | Embeds open-vocabulary language features in radiance fields for 3D localization and queries. |
+| [VGGT](https://arxiv.org/abs/2503.11651)          | 2025 | CVPR    | Predicts cameras, depth, point maps, and tracks from single or multiple views.               |
 | [SpatialLM](https://arxiv.org/abs/2506.07491)     | 2025 | NeurIPS | Turns point clouds into structured indoor layouts and object boxes with a multimodal LLM.    |
 
 ## Spatial Reasoning and Planning
@@ -117,7 +126,14 @@ layouts, floor plans, scene graphs, or object distributions.
 | [PhyScene](https://openaccess.thecvf.com/content/CVPR2024/html/Yang_PhyScene_Physically_Interactable_3D_Scene_Synthesis_for_Embodied_AI_CVPR_2024_paper.html)                   | 2024 | CVPR     | Generates physically interactable 3D scenes for embodied AI.                       |
 | [EchoScene](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/03146.pdf)                                                                                                 | 2024 | ECCV     | Improves scene graph diffusion through information echo over generated structures. |
 | [GraphDreamer](https://openaccess.thecvf.com/content/CVPR2024/html/Gao_GraphDreamer_Compositional_3D_Scene_Synthesis_from_Scene_Graphs_CVPR_2024_paper.html)                    | 2024 | CVPR     | Generates compositional 3D scenes from explicit scene graphs.                      |
+| [Deep Prior Assembly](https://arxiv.org/abs/2410.15971)                                                                                                                          | 2024 | NeurIPS  | Assembles foundation-model priors for zero-shot single-image scene reconstruction. |
 | [SceneFactor](https://openaccess.thecvf.com/content/CVPR2025/html/Bokhovkin_SceneFactor_Factored_Latent_3D_Diffusion_for_Controllable_3D_Scene_Generation_CVPR_2025_paper.html) | 2025 | CVPR     | Uses factored latent 3D diffusion for controllable scene generation.               |
+| [MIDI](https://arxiv.org/abs/2412.03558)                                                                                                                                         | 2025 | CVPR     | Extends image-to-3D diffusion to multiple instances with cross-instance attention.  |
+| [REPARO](https://arxiv.org/abs/2405.18525)                                                                                                                                       | 2025 | ICCV     | Reconstructs compositional 3D assets and aligns them with differentiable layout optimization. |
+| [Gen3DSR](https://arxiv.org/abs/2404.03421)                                                                                                                                      | 2025 | 3DV      | Splits single-view scene reconstruction into holistic cues and object-level detail. |
+| [DepR](https://arxiv.org/abs/2507.22825)                                                                                                                                         | 2025 | ICCV     | Uses depth-guided instance-level diffusion to reconstruct and compose single-view scenes. |
+| [3D-RE-GEN](https://arxiv.org/abs/2512.17459)                                                                                                                                    | 2025 | arXiv    | Reconstructs textured objects plus background with camera recovery and 4-DoF ground alignment. |
+| [SceneGen](https://arxiv.org/abs/2508.15769)                                                                                                                                     | 2026 | 3DV      | Generates multiple textured 3D assets and their spatial arrangement in one feedforward pass. |
 | [SpatialGen](https://arxiv.org/abs/2509.14981)                                                                                                                                  | 2026 | 3DV      | Generates view-consistent 3D indoor scenes from explicit semantic layouts.         |
 
 ## LLM and VFM Static Scene Pipelines
@@ -196,12 +212,15 @@ plausible scenes toward deployable environments for embodied AI.
 | [UnrealCV](https://doi.org/10.1145/3123266.3129396)                                                                                             | 2017 | ACM MM   | Connects Unreal Engine virtual worlds to computer vision workflows.              |
 | [SAPIEN](https://openaccess.thecvf.com/content_CVPR_2020/html/Xiang_SAPIEN_A_Simulated_Part-Based_Interactive_Environment_CVPR_2020_paper.html) | 2020 | CVPR     | Simulates articulated objects and part-based interaction.                        |
 | [PartNet-Mobility](https://arxiv.org/abs/2003.08515)                                                                                            | 2020 | arXiv    | Provides articulated objects with motion annotations for interaction simulation. |
+| [3D-FRONT](https://arxiv.org/abs/2011.09127)                                                                                                     | 2021 | ICCV     | Large furnished-room dataset with layouts, semantics, and textured CAD furniture. |
 | [Objaverse](https://arxiv.org/abs/2212.08051)                                                                                                   | 2023 | CVPR     | Large annotated 3D object dataset used by many scene-generation pipelines.       |
 | [Objaverse-XL](https://arxiv.org/abs/2307.05663)                                                                                                | 2023 | NeurIPS  | Expands Objaverse to 10M+ 3D objects.                                            |
 | [Isaac Lab / Orbit](https://arxiv.org/abs/2301.04195)                                                                                           | 2023 | RA-L     | Unified framework for interactive robot learning environments.                   |
 | [Genesis](https://github.com/Genesis-Embodied-AI/Genesis#readme)                                                                                | 2024 | GitHub   | Generative and universal physics engine for robotics and beyond.                 |
 | [TRELLIS](https://arxiv.org/abs/2412.01506)                                                                                                     | 2025 | CVPR     | Generates structured 3D latents for scalable and versatile 3D asset generation.  |
 | [Objaverse++](https://arxiv.org/abs/2504.07334)                                                                                                 | 2025 | arXiv    | Curates 3D objects with quality annotations for asset selection.                 |
+| [SF3D](https://arxiv.org/abs/2408.00653)                                                                                                        | 2025 | CVPR     | Performs fast single-image textured mesh reconstruction with UV unwrapping.      |
+| [Hunyuan3D 2.0](https://arxiv.org/abs/2501.12202)                                                                                               | 2025 | arXiv    | Scales diffusion models for high-resolution textured 3D asset generation.        |
 | [Hunyuan3D 2.1](https://arxiv.org/abs/2506.15442)                                                                                               | 2025 | arXiv    | Generates high-fidelity 3D assets with production-ready PBR materials.           |
 | [NVIDIA Isaac Sim](https://github.com/isaac-sim/IsaacSim#readme)                                                                                | 2025 | Software | Simulation platform for physically grounded robotics scenes and data generation. |
 
